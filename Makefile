@@ -94,3 +94,6 @@ distclean: clean
 	./configure
 	make sjcl.js tidy
 
+core.js: core/srp.js
+v: core.js 
+	rhino -w -e test/v.js
